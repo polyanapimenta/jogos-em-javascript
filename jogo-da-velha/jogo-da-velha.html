@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="interface.css">
+    <title>Jogo da Velha</title>
+</head>
+<body>
+    <div id="painel">
+        <p>Vez do Jogador</p>
+        <img src="#" alt="jogador">
+    </div>
+
+    <div id="placar">
+        <div id="x">
+            <img src="assets/x.svg" alt="Jogador X">
+            <span class="pontos-x">3</span>
+        </div>
+
+        <div id="o">
+            <img src="assets/circle-1.svg" alt="Jogador O">
+            <span class="pontos-o">2</span>
+        </div>
+    </div>
+
+    <div id="tabuleiro">
+        <div class="l1">
+            <span class="a space" jogada=""><!-- <img src="assets/circle.svg" alt="Jogador X"> --></span>
+            <span class="b space" jogada=""></span>
+            <span class="c space" jogada=""></span>
+        </div>
+        <div class="l2">
+            <span class="a space" jogada=""></span>
+            <span class="b space" jogada=""></span>
+            <span class="c space" jogada=""></span>
+        </div>
+        <div class="l3">
+            <span class="a space" jogada=""></span>
+            <span class="b space" jogada=""></span>
+            <span class="c space" jogada=""></span>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="mecanismo.js"></script>
+</body>
+</html>
