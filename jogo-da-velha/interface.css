@@ -14,9 +14,12 @@ body{
 
 #painel p {
     margin: 0;
-    padding-right: 20px;
-    font-size: 40px;
+    font-size: 50px;
     text-transform: uppercase;
+}
+
+#painel img {
+    padding: 5px 20px;
 }
 
 span {
