@@ -34,8 +34,9 @@ function painel() {
         setPainel.innerHTML = `<p>O vencedor foi</p><img src="./assets/${vencedor}.svg"><p>!</p>`
         botaoRestart()
     }                                                      
-    else if (gameOver) {                                                          // seta o painel em caso de empate
+    else if (gameOver) {                                                           // seta o painel em caso de empate
         setPainel.innerHTML = `<p>Empate, Game Over!</p><img src="./assets/game-over-3.svg">`
+        botaoRestart()                                                             // aparece o botão de restart no game, sem a necessidade de atualizar a pág. e perder os pontos das partidas 
         return                                                                     // retorna vazio e não faz nada
     }
     else if (jogador == player1)
@@ -52,13 +53,11 @@ function inicializaJogo() {
         
         space[i].addEventListener('click', function(){
                                                                                  // Aqui serve para o reinício do jogo
-            if (gameOver) {                                                      // aparece o botão de restart no game, sem a necessidade de atualizar a pág. e perder os pontos das partidas  
-                botaoRestart()
-                return                                                           // funcao para setar o jogo para uma nova partida sem dar refresh na página                                                         //não faz nada, e não aceita nenhum clique no tabuleiro do jogo da velha
-            }
+            if (gameOver)                                                       
+                return                                                           //não faz nada, e não aceita nenhum clique no tabuleiro do jogo da velha
                                                                                  // se eu não tiver uma imagem dentro do meu space (TAG span, quadrado do jogo da velha) faça alguma coisa
             if ( this.getElementsByTagName('img').length == 0 ){
-                ajusteInterface(space[i], 30)                                       // pequena alteração na interface.css, com JS
+                ajusteInterface(space[i], 30, 10)                                       // pequena alteração na interface.css, com JS
                 
                 if (jogador == player1) {
                     this.innerHTML = `<img src="assets/${player1}.svg" alt="${player1}">`         // adicina dentro do html (span) a img do player
@@ -78,8 +77,9 @@ function inicializaJogo() {
     }
 }
 
-function ajusteInterface(space, px) {
-    space.style.paddingLeft = `${px}px`
+function ajusteInterface(space, leftPX,rightPX) {
+    space.style.paddingLeft = `${leftPX}px`
+    space.style.paddingRight = `${rightPX}px`
 }
                                                                                 // função assíncrona (usamos ela por causa do await), podemos continuar com a execução do programa sem depender da finalização dessa função (executa sem travar o programa, libera o navegador para atualizar o HTML)
 async function verificaVencedor() {
@@ -138,7 +138,7 @@ function restartGame() {
   for(let i = 0; i< space.length; i++){
     space[i].innerHTML = ''                                                        // limpando imagens dos playes 'x' ou 'o' dos quadrados do jogo
     space[i].setAttribute('jogada', '')                                            // limpando atributo que guarda 'x' ou 'o' dos quadrados do jogo da velha que posteriormente determin um vencedor
-    ajusteInterface(space[i], 160)
+    ajusteInterface(space[i], 140, 0)
   }
 
   // resetar painel
@@ -150,7 +150,7 @@ function botaoRestart(){
     botao.innerHTML = '<button>reiniciar</button>'
     botao.addEventListener('click', function(event){
         if (event.target.nodeName == 'BUTTON')
-            restartGame()      
+            restartGame()                                                          // funcao para setar o jogo para uma nova partida sem dar refresh na página   
     })
 }
 selecionaJogador()
