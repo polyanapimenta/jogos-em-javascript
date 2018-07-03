@@ -9,7 +9,7 @@ body{
 #painel {
     display: flex;
     justify-content: center;
-    margin: 70px 0;
+    margin: 65px 0 85px;
 }
 
 #painel p {
