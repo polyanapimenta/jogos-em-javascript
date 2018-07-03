@@ -20,6 +20,7 @@ body{
 
 #painel img {
     padding: 0px 20px;
+    cursor: pointer;
 }
 
 span {
