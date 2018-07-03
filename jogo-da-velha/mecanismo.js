@@ -8,8 +8,11 @@ let gameOver = false                                                            
                                                                                    // seleciona o jogador antes de atualizar o painel
 function selecionaJogador() {
                                                                                    // pegando as tags img dos jogadores do painel
+    let resetPainel = document.getElementById('painel')
+    let content = '<p>Escolha um Jogador</p><img src="./assets/x.svg" alt="x"><p>ou</p><img src="./assets/o.svg" alt="o">'
+    resetPainel.innerHTML = content
     let selecao = document.getElementById('painel').querySelectorAll('div#painel img')
-    
+
     for(let i = 0; i < selecao.length; i++ ){
         selecao[i].addEventListener('click', function(){
             jogadorEscolhido = selecao[i].getAttribute('alt')                      //saber qual jogador foi selecionado
@@ -27,9 +30,10 @@ function painel() {
     let setPainel = document.getElementById('painel')
     let content = `<p>Vez do Jogador</p><img src="./assets/${jogador}.svg" alt="${jogador}">`
                                                                                    // seta o painel para o vencedor
-    if (vencedor)                                                                  
+    if (vencedor) {                                                                
         setPainel.innerHTML = `<p>O vencedor foi</p><img src="./assets/${vencedor}.svg"><p>!</p>`
-                                                           
+        botaoRestart()
+    }                                                      
     else if (gameOver) {                                                          // seta o painel em caso de empate
         setPainel.innerHTML = `<p>Empate, Game Over!</p><img src="./assets/game-over-3.svg">`
         return                                                                     // retorna vazio e não faz nada
@@ -47,15 +51,14 @@ function inicializaJogo() {
     for (let i = 0; i < space.length; i++) {
         
         space[i].addEventListener('click', function(){
-            
-            if (gameOver) {
-                console.log('Aqui pode servir para reinício do jogo')
-                //restartGame()                                                     // funcao para setar o jogo para uma nova partida sem dar refresh na página
-                return                                                          //não faz nada, e não aceita nenhum clique no tabuleiro do jogo da velha
+                                                                                 // Aqui serve para o reinício do jogo
+            if (gameOver) {                                                      // aparece o botão de restart no game, sem a necessidade de atualizar a pág. e perder os pontos das partidas  
+                botaoRestart()
+                return                                                           // funcao para setar o jogo para uma nova partida sem dar refresh na página                                                         //não faz nada, e não aceita nenhum clique no tabuleiro do jogo da velha
             }
-                                                                                // se eu não tiver uma imagem dentro do meu space (TAG span, quadrado do jogo da velha) faça alguma coisa
+                                                                                 // se eu não tiver uma imagem dentro do meu space (TAG span, quadrado do jogo da velha) faça alguma coisa
             if ( this.getElementsByTagName('img').length == 0 ){
-                ajusteInterface(space[i])                                       // pequena alteração na interface.css, com JS
+                ajusteInterface(space[i], 30)                                       // pequena alteração na interface.css, com JS
                 
                 if (jogador == player1) {
                     this.innerHTML = `<img src="assets/${player1}.svg" alt="${player1}">`         // adicina dentro do html (span) a img do player
@@ -75,8 +78,8 @@ function inicializaJogo() {
     }
 }
 
-function ajusteInterface(space) {
-    space.style.paddingLeft = '30px'
+function ajusteInterface(space, px) {
+    space.style.paddingLeft = `${px}px`
 }
                                                                                 // função assíncrona (usamos ela por causa do await), podemos continuar com a execução do programa sem depender da finalização dessa função (executa sem travar o programa, libera o navegador para atualizar o HTML)
 async function verificaVencedor() {
@@ -120,16 +123,36 @@ function placar(vencedor) {
 
     let pontuacao = document.getElementsByClassName(player)[0]
     let pontos = parseInt(pontuacao.innerText) + 1
-    pontuacao.innerText = pontos                                                // inserindo no html o valor de pontucao do jogador
-
-    // restartGame()
+    pontuacao.innerText = pontos                                                   // inserindo no html o valor de pontucao do jogador
 }
 
-/* function restartGame() {
-  // limpar os blocos prenchidos
-  selecionaJogador()
-} */
+function restartGame() {   
+  // resetando variáveis
+    jogadas  = null                                                                // ajuda a definir o empate da jogada
+    jogador  = null                                                                // quem está jogando, ou quem irá começar a jogada
+    vencedor = null 
+    gameOver = false 
+  
+  // limpando os blocos prenchidos no jogo
+  let space = document.getElementsByClassName('space') 
+  for(let i = 0; i< space.length; i++){
+    space[i].innerHTML = ''                                                        // limpando imagens dos playes 'x' ou 'o' dos quadrados do jogo
+    space[i].setAttribute('jogada', '')                                            // limpando atributo que guarda 'x' ou 'o' dos quadrados do jogo da velha que posteriormente determin um vencedor
+    ajusteInterface(space[i], 160)
+  }
 
+  // resetar painel
+  selecionaJogador()
+}
+
+function botaoRestart(){
+    let botao = document.getElementsByClassName('restart')[0]
+    botao.innerHTML = '<button>reiniciar</button>'
+    botao.addEventListener('click', function(event){
+        if (event.target.nodeName == 'BUTTON')
+            restartGame()      
+    })
+}
 selecionaJogador()
 painel()
 inicializaJogo()

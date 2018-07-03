@@ -33,9 +33,9 @@ img {
 }
 
 #placar {
-    width: 120px;
+    width: 155px;
     text-align: center;
-    padding: 150px 0 0 400px;
+    padding: 135px 0 0 400px;
     float: left;
 }
 
@@ -73,4 +73,37 @@ img {
     padding-left: 160px; /* largura do quadrado */
     margin-right: 15px;  /* margem entre eles */
     margin-bottom: 15px;
+}
+
+.restart {
+    padding-top: 50px;
+    text-align: center;
+}
+.restart button {
+    text-transform: uppercase;
+    background-color: #c8d6e5;
+    box-shadow:0 5px 0 #8395a7;
+    border: none;
+    border-radius: 7px;
+
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bolder;
+    color:#000;
+
+    width: 135px;
+    height: 50px;
+}
+.restart button:focus {
+    outline:none;
+}
+.restart button:hover {
+    background-color: #889aac;
+    box-shadow:0 5px 0 #576574;
+}
+.restart button:active {
+    top:5px;
+    position:relative;
+    background-color: #576574;
+    box-shadow:none;
 }
