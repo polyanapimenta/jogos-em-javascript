@@ -17,8 +17,7 @@ ATENÇÃO: Não se preocupe, breve novos jogos serão desenvolvidos, e disponibi
 [CLIQUE AQUI PARA JOGAR ONLINE!][jogos-em-javascript]
 
 
-Abs,
-
+Abs,  
 *[Polyana Pimenta][linkedin]* :D
 
 
