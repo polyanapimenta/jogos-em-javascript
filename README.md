@@ -14,7 +14,7 @@ ATENÇÃO: Não se preocupe, breve novos jogos serão desenvolvidos, e disponibi
 ***OBS.: Fique a vontade para Forkar (copiar) o repositório***  
 
 
-[CLIQUE AQUI PARA JOGAR ONLINE!][jogos-em-javascript]  
+**[CLIQUE AQUI PARA JOGAR ONLINE!][jogos-em-javascript]**
 
 
 Abs,  
