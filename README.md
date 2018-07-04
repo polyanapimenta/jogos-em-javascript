@@ -8,7 +8,7 @@ ATENÇÃO: Não se preocupe, breve novos jogos serão desenvolvidos, e disponibi
 
 :D
 
-**OBS.: Fique a vontade para ***Forkar*** (copiar) o repositório**
+***OBS.: Fique a vontade para **Forkar** (copiar) o repositório***
 
 
 [CLIQUE AQUI PARA JOGAR ONLINE!][jogos-em-javascript]
