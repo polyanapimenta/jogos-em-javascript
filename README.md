@@ -2,7 +2,7 @@ Acesse aos jogos, estão todos online aqui na página do repositório: [Jogos em
 lá coloquei uma listagem dos jogos que eu desenvolvi utilizando a linguagem Javascript, aproveite para jogá-los e testá-los! 
 
 
-
+:D
 
 
 ![Jogue AQUI!](./assets/thumbnail/jogos.png)
