@@ -1,6 +1,8 @@
 Acesse aos jogos, estão todos online aqui na página do repositório: [Jogos em Javascript][jogos-em-javascript], 
 lá coloquei uma listagem dos jogos que eu desenvolvi utilizando a linguagem Javascript, aproveite para jogá-los e testá-los! 
-<br>
+
+
+
 
 
 ![Jogue AQUI!](./assets/thumbnail/jogos.png)
