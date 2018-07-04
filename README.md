@@ -11,7 +11,7 @@ lá coloquei uma listagem dos jogos que eu desenvolvi utilizando a linguagem Jav
 ATENÇÃO: Não se preocupe, breve novos jogos serão desenvolvidos, e disponibilizados neste repositório, acompanhe!  
 
 
-***OBS.: Fique a vontade para Forkar (copiar) o repositório***  
+*OBS.: Fique a vontade para Forkar (copiar) o repositório*  
 
 
 **[CLIQUE AQUI PARA JOGAR ONLINE!][jogos-em-javascript]**
