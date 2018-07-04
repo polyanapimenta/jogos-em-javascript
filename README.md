@@ -18,4 +18,9 @@ ATENÇÃO: Não se preocupe, breve novos jogos serão desenvolvidos, e disponibi
 
 :D
 
+
+*[Polyana Pimenta]*.[linkedin]
+
+
 [jogos-em-javascript]: https://polyanapimenta.github.io/jogos-em-javascript/
+[linkedin]: https://linkedin.com/in/polyanapimenta/
