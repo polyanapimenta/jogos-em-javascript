@@ -6,6 +6,11 @@ body {
     font-family: 'Oswald', sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: #000;
+}
+
 .content {
     width: 1000px;
     margin: 0 auto;
@@ -31,7 +36,7 @@ header h2, header p {
 }
 
 header a {
-    color: #000000;
+    text-decoration: underline;
 }
 
 .projeto {
@@ -39,11 +44,6 @@ header a {
     margin: 70px 5px 0;
     width: 320px;
     background-color: #FFD33F;
-}
-
-.projeto a {
-    text-decoration: none;
-    color: #000;
 }
 
 .thumbnail img {
@@ -112,4 +112,87 @@ footer img{
     width: 20px;
     height: 20px;
     margin: 20px 8px;
+}
+
+footer a {
+    color: #91CECE;
+}
+
+/* #################################### */
+/* ### small screens ################## */
+
+@media only screen and (max-width:990px) {
+    /* para tablets */
+    .content {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .projeto {
+        width: 45%;
+        margin: 15% 2% 0 2%;
+    }
+    .thumbnail img{
+        width: 100%;
+        height: 100%;
+    } 
+    .titulo {
+        font-size: 100%;
+        padding: 3% 8%;
+    }
+    .titulo h3 {
+        padding-bottom: 5%;
+    }
+    .voltar {
+        padding-left: 5%;
+        padding-bottom: 10%;
+    }
+    footer {
+        position: relative;
+        bottom: 0;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    /* para smartphones */
+    header {
+        font-size: 90%;
+    }
+    header img {
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 25%;
+    }
+    header p {
+        margin: 0;
+        padding: 0;
+        padding-left: 20%;
+    }
+    .content {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .projeto {
+        width: 90%;
+        margin: 0 5% 20%;
+    }
+    .thumbnail img{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .titulo {
+        font-size: 100%;
+        padding: 3% 8%;
+    }
+    .titulo h3 {
+        padding-bottom: 5%;
+    }
+    .voltar {
+        padding-left: 5%;
+        padding-bottom: 10%;
+    }
+    footer {
+        position: relative;
+        bottom: 0;
+    }
 }
