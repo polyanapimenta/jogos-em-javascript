@@ -16,10 +16,7 @@ ATENÇÃO: Não se preocupe, breve novos jogos serão desenvolvidos, e disponibi
 
 [CLIQUE AQUI PARA JOGAR ONLINE!][jogos-em-javascript]
 
-:D
-
-
-*[Polyana Pimenta][linkedin]*
+:D *[Polyana Pimenta][linkedin]*
 
 
 [jogos-em-javascript]: https://polyanapimenta.github.io/jogos-em-javascript/
