@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee+Inline|Oswald');
+
+body, header, h1, h2, h3, p, span, img, a, div { margin: 0; padding: 0; }
+
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+.content {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+header {
+    border-top: 2px solid #000000;
+}
+
+header span img {
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+
+header h2 {
+    font-family: 'Bungee Inline', cursive;
+    margin-top: 25px;
+}
+
+header h2, header p {
+    padding-left: 70px;
+}
+
+header a {
+    color: #000000;
+}
+
+.projeto {
+    display: inline-block;
+    margin: 70px 5px 0;
+    width: 320px;
+    background-color: #FFD33F;
+}
+
+.projeto a {
+    text-decoration: none;
+    color: #000;
+}
+
+.thumbnail img {
+    width: 320px;
+    height: 240px;
+}
+
+.projeto:hover {
+    box-shadow: 0px 0px 5px #202033;
+}
+.projeto, .thumbnail img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.titulo {
+    padding: 10px 30px;
+    background-color: #FFD33F;
+    color: #202033;
+}
+
+.titulo h3 {
+    text-transform: uppercase;
+}
+
+.titulo a img {
+    width: 42px;
+    height: 42px;
+    margin: 5px 20px 0 0;
+}
+
+.voltar {
+    text-transform: uppercase;
+    margin: 55px 0 0px 5px;
+}
+
+.voltar a {
+    color: #202033;
+    text-decoration: none;
+}
+
+.voltar img {
+    width: 32px;
+    height: 32px;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    background-color: #202033;
+    border-bottom: 3px solid #91CECE;
+    font-size: 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+footer p {    
+    color: #91CECE;
+}
+
+footer img{
+    width: 20px;
+    height: 20px;
+    margin: 20px 8px;
+}
